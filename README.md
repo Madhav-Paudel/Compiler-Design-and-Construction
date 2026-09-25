@@ -142,7 +142,6 @@ lexeme token_type
 ```
 
 #### Example input for Lab 2
-This is the sample input shown in your screenshot:
 
 ```text
 17
