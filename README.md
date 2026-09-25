@@ -24,6 +24,31 @@ It recognizes:
 - Semicolon and comma
 - Unknown symbols
 
+#### Example input for Lab 1
+This is the same type of input shown in the screenshot. After starting the program, enter the code below and finish with `END` on a new line:
+
+```text
+int x = 10;
+int y = 20;
+if (x >= y) {
+    z = x + y * 2;
+}
+while (x < 100) {
+    x = x + 1;
+}
+END
+```
+
+#### Example output for Lab 1
+```text
+<int, KEYWORD>
+<x, IDENTIFIER>
+<=, ASSIGN>
+<10, NUMBER>
+<;, SEMICOLON>
+...
+```
+
 ### 2. Parser
 The parser reads a list of tokens and checks whether they follow a simple grammar for function declarations and assignments.
 
@@ -116,21 +141,43 @@ Then enter:
 lexeme token_type
 ```
 
-Example:
+#### Example input for Lab 2
+This is the sample input shown in your screenshot:
 
 ```text
-void KEYWORD
+17
+void void
 main IDENTIFIER
-( LEFT_PARENTHESIS
-) RIGHT_PARENTHESIS
-{ LEFT_BRACE
-int KEYWORD
+( (
+) )
+{ {
+int int
 x IDENTIFIER
-= ASSIGN
-10 NUMBER
-; SEMICOLON
-} RIGHT_BRACE
+= =
+5 NUMBER
+; ;
+x IDENTIFIER
+= =
+x IDENTIFIER
++ +
+1 NUMBER
+; ;
+} }
 ```
+
+#### Example explanation for Lab 2
+- First line = number of tokens
+- Each following line = `lexeme token_type`
+- The above input represents a small function such as:
+
+```text
+void main() {
+    int x = 5;
+    x = x + 1;
+}
+```
+
+This is the example people can use while running the parser program.
 
 ---
 
